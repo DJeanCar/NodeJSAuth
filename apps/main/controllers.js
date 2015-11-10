@@ -5,6 +5,7 @@ const express = require('express'),
 router.route('/')
 
 	.get(function (req, res) {
+		res.locals.user = req.user;
 		res.render('main/home.html');
 	});
 
